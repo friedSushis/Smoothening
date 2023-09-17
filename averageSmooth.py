@@ -55,7 +55,7 @@ for y in range(height):
                 py = y + j
 
                 if 0 <= px < width and 0 <= py < height:
-                    image.seek(54 + (py * width + px) * 3)
+                    image.seek(54 + (py * width + px) * 3) #added a check to see if this was the reason for my problems. It was not
 
                     red = int.from_bytes(image.read(1), "little")
                     green = int.from_bytes(image.read(1), "little")
