@@ -49,10 +49,10 @@ for y in range(height):
         blue_sum = 0
         pixel_count = 0
 
-        for ky in range(-half_area, half_area + 1):
-            for kx in range(-half_area, half_area + 1):
-                px = x + kx
-                py = y + ky
+        for i in range(-half_area, half_area + 1):
+            for j in range(-half_area, half_area + 1):
+                px = x + i
+                py = y + j
 
                 if 0 <= px < width and 0 <= py < height:
                     image.seek(54 + (py * width + px) * 3)
